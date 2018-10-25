@@ -1,0 +1,5 @@
+# Create/update the conda environment
+conda env update -f .\env.yml
+
+# Use the environment
+activate sample-app
