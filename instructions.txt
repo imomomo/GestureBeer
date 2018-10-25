@@ -3,3 +3,9 @@ conda env update -f .\env.yml
 
 # Use the environment
 activate sample-app
+
+# Initialize local Git repo
+git init .
+
+# Add and commit all changes
+git commit -a -m "my sample message" .
