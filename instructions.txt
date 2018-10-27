@@ -11,6 +11,9 @@ conda info
 # Install a new packages
 conda install flask
 
+# Get version of all packages
+pip freeze
+
 # Activate the environment after create/update, before use
 activate sample-app
 

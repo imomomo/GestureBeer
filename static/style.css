@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+body{
+	/*background-color: #003399;*/
+	/*background-color: #0044cc;*/
+	background-color: #002b80;
+}
+
+div.container {
+    width: 450px;
+	min-height: 800px;
+	position: absolute;
+    /*top:0;
+    bottom: 0;*/
+    left: 0;
+    right: 0;
+    margin: auto;
+	border: 1px solid #ffcc00;
+	border-radius: 10px;
+	/*background-color: #0044cc;*/
+	background-color: #002b80;
+}
+
+#div_TagMeTips {
+	width:auto;
+	text-align: left;
+	padding: 1em;
+	padding-left: 2em;
+}
+
+header{
+	color: #003399;
+	background-color: #ffcc00;
+    text-align: center;
+	font-family: 'Fredoka+One', arial black;
+	font-size:1em;
+}
+footer {
+	color: #003399;
+	background-color: #ffcc00;
+    text-align: center;
+	font-family: Arial;
+}
+
+article {
+	text-align: center;
+    overflow: hidden;
+	font-family:arial;
+	color: #ffcc00;
+}
+
+.button {
+    background-color: #002b80;
+    border: 1px #ffcc00 solid;
+	border-radius: 4px;
+    color: #ffcc00;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+	font-family = arial bold;
+	width: 60%;
+	margin-bottom: 0.5cm;
+}
+.button:hover {
+    background-color: #ffcc00;
+	color: #003399;
+}
+
+#closeWindow {
+	padding: 0.2em;
+	font-size: 1em;
+	margin:1em;
+}
+
+.profile{
+    border-radius: 50%;
+	height:150px;
+	width:150px;
+	left:0px;
+}
+
+.img_help {
+	border:2px #ffcc00 solid;
+	border-radius: 5px;
+	width: 150px;
+	height: 150px;
+	color: #ffcc00;
+	padding: 12px;
+}
+
+#img_fitResult {
+	width: 150px;
+	border:1px #ffcc00 solid;
+	border-radius: 1px;
+	color: #ffcc00;
+	padding: 1px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 45%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

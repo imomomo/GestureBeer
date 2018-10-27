@@ -1,1 +1,1 @@
-USER_NAME="Mo"
+AUTH_NAME="Mo Zhang, mo.zhang@microsoft.com"
