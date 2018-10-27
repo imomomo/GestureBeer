@@ -1,11 +1,41 @@
+############ Environment ############
 # Create/update the conda environment
+conda env create -f .\env.yml
 conda env update -f .\env.yml
 
-# Use the environment
+# Check packages in the environment
+conda list
+# Check the info of the environment
+conda info
+
+# Install a new packages
+conda install flask
+
+# Activate the environment after create/update, before use
 activate sample-app
 
+#Run a py script
+python main.py
+
+############ File directory ############
+# Add callable functions or global variables
+1. Creat file util under the project file
+2. Create shared.py
+3. Define global and/or functions in shared.py
+4. Call as import packages, e.g.
+    import <variable_name> from util
+    import <function_name> from util
+
+############ Version Control with Git ############
 # Initialize local Git repo
 git init .
 
 # Add and commit all changes
 git commit -a -m "my sample message" .
+
+# Define ignored files
+1. Add .gitignore under the project file
+2. List all files to be ignored in .gitignore, e.g.
+    __pycache__
+    *.pyc
+    .vscode
