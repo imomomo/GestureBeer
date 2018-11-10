@@ -1,7 +1,26 @@
+############ abb #######
+-n name
+-f file
+
 ############ Environment ############
 # Create/update the conda environment
 conda env create -f .\env.yml
 conda env update -f .\env.yml
+
+# Activate the environment after create/update, before use
+activate sample-app
+
+# Deactivate the current environment before using another environment
+deactivate
+
+# List all env and remove an env
+conda env list
+conda env remove -n env_name 
+# Create an evironment YAML file for the current environment 
+conda env export > env.yaml
+
+# Export a txt with env specification
+pip freeze > environment.txt
 
 # Check packages in the environment
 conda list
@@ -14,9 +33,7 @@ conda install flask
 # Get version of all packages
 pip freeze
 
-# Activate the environment after create/update, before use
-activate sample-app
-
+############ Py ############
 #Run a py script
 python main.py
 
@@ -42,3 +59,11 @@ git commit -a -m "my sample message" .
     __pycache__
     *.pyc
     .vscode
+
+# Create an empty repo in github
+git remote add origin https://github.com/imomomo/nsdelay.git
+
+# Push local repo (or repo changes) to github
+git push -u origin master
+option 2: Also possible go to github website and upload all files.
+option 3: Open Command Pallet (crl+shf+P) >git: Push

@@ -22,11 +22,6 @@ BASE_URL='https://westeurope.api.cognitive.microsoft.com/face/v1.0'
 CF.Key.set(KEY)
 CF.BaseUrl.set(BASE_URL)
 
-#gesture recognition key
-service_uri = "http://104.42.51.210/api/v1/service/emoji-handssvc/score"
-auth_key = "jCl6LXwOOs2PCSLQmwo38tcVjZi2WDj2"
-headers = {'Content-Type': 'application/json', 'Authorization' : 'Bearer ' + auth_key}
-
 #Initiate a Null model for one shop
 shopNr=3
 aShop="shop"+str(shopNr)
@@ -82,7 +77,7 @@ def GetDomFace(image,faces,frameNr):
     return PATH+"faces/face"+str(frameNr)+".jpg"
 
 #Verify whether the face is in the consented personal database
-def VerifyConsent():
+def VerifyFace():
     vidcap = cv2.VideoCapture(cv2.CAP_DSHOW+1) #+1 use the other camera than default camera
     frameNr = 0
     success = True
@@ -174,18 +169,9 @@ def GetGesture():
 app = Flask(__name__)
 @app.route('/')# if HTML contains forms, use GET and Post 
 def welcome():
-    personID,emotion =VerifyConsent()
-    if personID==[]:
-        return redirect('/qsurvey')
-    else:
-        #pref=GetPurchasePref(personID)
-        img1="static/images/burger.jpg"
-        img2="static/images/coffee.jpg"
-        return render_template('Consented.html',emotion=emotion,img1=img1,img2=img2)
-
-@app.route('/qsurvey')
-def qsurvey():
-    return render_template('QSurveyGesture.html')
+    personID,emotion =VerifyFace()
+    #pref=GetPurchasePref(personID)
+    return render_template('QSurveyWelcome.html',emotion=emotion)
 
 @app.route('/q18',methods=['GET','POST'])
 def q18():
