@@ -22,6 +22,12 @@ BASE_URL='https://westeurope.api.cognitive.microsoft.com/face/v1.0'
 CF.Key.set(KEY)
 CF.BaseUrl.set(BASE_URL)
 
+#gesturePAI
+service_uri = "http://104.42.51.210/api/v1/service/emoji-handssvc/score"
+auth_key = "jCl6LXwOOs2PCSLQmwo38tcVjZi2WDj2"
+image_path = 'C:/Users/mzhang/Pictures/Camera Roll/thumbup.jpg'
+headers = {'Content-Type': 'application/json', 'Authorization' : 'Bearer ' + auth_key}
+
 #Initiate a Null model for one shop
 shopNr=3
 aShop="shop"+str(shopNr)
