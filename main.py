@@ -175,8 +175,12 @@ def GetGesture():
 app = Flask(__name__)
 @app.route('/')# if HTML contains forms, use GET and Post 
 def welcome():
-    personID,emotion =VerifyFace()
     #pref=GetPurchasePref(personID)
+    return redirect('/qsurvey')
+
+@app.route('/qsurvey')
+def qsurvey():
+    personID,emotion =VerifyFace()
     return render_template('QSurveyWelcome.html',emotion=emotion)
 
 @app.route('/q18',methods=['GET','POST'])
